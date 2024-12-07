@@ -120,8 +120,7 @@ input {
 button {
     display: block;
     background-color: #FF507A;
-    min-width: 370px;
-    max-width: 370px;
+    width: 100%;;
     margin: 8px 0 16px 0;
     padding: 8px 16px;
     border: none;
