@@ -91,7 +91,11 @@
 
     $('#contato').mask('(00) 00000-0000');
     $('#dtNacimento').mask('00');
-    $('#uf').mask('SS')
+    $('#uf').mask('SS');
+
+    if(document.querySelector(".container").style.widht < '370px') {
+        document.querySelector("header .container").style.display = 'block';
+    }
 
 
     //Função para gerar o PDF
