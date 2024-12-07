@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Curriculum</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logoTipo">
+                <img src="./image/cvitae.png" alt="Curriculum Vitae">
+            <h1>Gerador de Curriculum</h1>
+            </div>
+            <div id="print">
+                <button id="imprimir">Gerar e Baixar PDF</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="secao-main">
+            <section class="left">
+                <div class="dps">
+                    <h2>Dados Pessoais</h2>
+                    <form id="formulario">
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome"required placeholder="Antonio Cardoso dos Santos">
+                        <label for="nacionalidade">Nacionalidade:</label>
+                        <input type="text" id="nacionalidade" required placeholder="Brasileiro">
+                        <label for="estadoCivil">Estado Civil:</label>
+                        <input type="text" id="estadoCivil" placeholder="Solteiro, Casado, Viúvo ou Separado Judicialmente">
+                        <label for="dtNacimento">Data Nascimento:</label>
+                        <input type="number" id="dtNacimento" required placeholder="25">
+                        <label for="mail">E-mail</label>
+                        <input type="email" id="mail" placeholder="Digite o seu melhor e-mail" required>
+                        <label for="contato">Contato:</label>
+                        <input type="text" id="contato" required placeholder="(85) 99100-0009">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" placeholder="Avenida Barão de Studart 120 Aldeota" required>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" placeholder="Fortaleza" required>
+                        <label for="uf">Estado:</label>
+                        <input type="text" id="uf" placeholder="Ceara" required>
+                        <button type="submit">Adicionar dados Pessoais</button>
+                    </form>
+                </div>
+                    <div class="objetivo">
+                        <h2>Objetivo</h2>
+                        <textarea id="textareaObj" required placeholder="Atua na area de logistica administrativa" maxlength="250"></textarea>
+                        <button type="submit" id="addOBJ" title="Adicionar objetivos ao Curriculum" onclick="salvarOBJ()">Adicionar Objetivos</button>
+                        <h2>Formação Acadêmica</h2>
+                        <input type="text" id="forma-academica" required placeholder="Bacharelado em logistica (2018)">
+                        <button type="submit" id="btn-formacao">Adicionar Formação</button>
+                        <h2>Curso Complementares</h2>
+                        <input type="text" id="curso-complementar" placeholder="Curso de inglês" required>
+                        <button type="submit" id="btn-curso">Adicionar Cursos</button>
+                        <h2>Experiências</h2>
+                        <input type="text" id="experiencia" placeholder="Experiência em logistica" required>
+                        <button type="submit" id="btn-experiencia">Adicionar Experiência</button>
+                    </div>
+            </section>
+            <section class="right">
+                <span id="previewNome"></span>
+                <div class="containerPreview">
+                    <span id="bloc01"></span>
+                    <span id="bloc02"></span>
+                    <span id="bloc03"></span>
+                    <span id="bloc04"></span>
+                </div>
+                <div class="academy">
+                    <h2 id="objetivos"></h2>
+                    <hr id="linhaOBJ">
+                    <p id="obj"></p>
+
+                    <h2 id="formacaoAcademica"></h2>
+                    <hr id="linhaFormAcademica">
+                    <ul id="list-form"></ul>
+
+                    <h2 id="cursos"></h2>
+                    <hr id="linhaCursos">
+                    <ul id="list-cursos"></ul>
+
+                    <h2 id="experi"></h2>
+                    <hr id="linhaExperi">
+                    <ul id="list-experi"></ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
