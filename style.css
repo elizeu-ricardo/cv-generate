@@ -169,6 +169,7 @@ h2 {
 
  #obj {
     padding: 8px 0;
+    max-width: 100%;
  }
 
  ul li {
